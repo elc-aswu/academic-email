@@ -23,7 +23,6 @@
         <div class="container-fluid py-3">
             <div class="row">
                 <div class="mx-auto">
-                    <h5>your email</h5>
                     <div id="email">
                     </div>
                 </div>
@@ -52,15 +51,16 @@
         var url = new URL(url_string);
         var e = url.searchParams.get("email");
         var p = url.searchParams.get("password");
-
-        var allinfo = "";
         if(p=="")
         {
             p = "جاري انشاء كلمة السر";
         }
-            
-            allinfo = `<h4>${e}</h4>` + "<h5>password</h5>"
-                +`<h4>${p}</h4><h5>`
+        if(p=="miss")
+        {
+            e = "يتم عمل حساب جامعي لك";
+            p = "جاري انشاء كلمة السر";
+        }
+           var allinfo = `<h5>your email</h5><h4>${e}</h4>` + `<h5>password</h5><h4>${p}</h4><h5>`
             +`<a href="https://www.microsoft.com/microsoft-365/onerf/signin?EEL=True&pcexp=True&ru=https%3A%2F%2Fwww.microsoft.com%2Far-ww%2Fmicrosoft-365%3Fms.url%3Doffice365com%26rtc%3D1" target="_blank"><button type="button" class="btn btn-primary">تفعيل الايميل الجامعي</button></a></h5>` ;
         document.getElementById("email").innerHTML = allinfo;
     </script>
