@@ -61,8 +61,9 @@
         }
         else
         {
-            allinfo = e + "<h5>password</h5>"+ p
-            +"<a href=\"https://www.microsoft.com/microsoft-365/onerf/signin?EEL=True&pcexp=True&ru=https%3A%2F%2Fwww.microsoft.com%2Far-ww%2Fmicrosoft-365%3Fms.url%3Doffice365com%26rtc%3D1\"><button type=\"button\" class=\"btn btn-primary\">تفعيل الايميل الجامعي</button></a>" ;
+            allinfo = `<h4>${e}/h4>` + "<h5>password</h5>"
+                +`<h4>${p}/h4>`
+            +`<a href="https://www.microsoft.com/microsoft-365/onerf/signin?EEL=True&pcexp=True&ru=https%3A%2F%2Fwww.microsoft.com%2Far-ww%2Fmicrosoft-365%3Fms.url%3Doffice365com%26rtc%3D1"><button type="button" class="btn btn-primary">تفعيل الايميل الجامعي</button></a>` ;
         }
         document.getElementById("email").innerHTML = allinfo;
     </script>
