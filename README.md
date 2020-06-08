@@ -1,2 +1,2 @@
-Help website for Students
-https://elc-aswu.github.io/Help/
+website
+https://elc-aswu.github.io/academic-email/
