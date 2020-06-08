@@ -18,7 +18,12 @@
         <div class="container-fluid py-3">
             <div class="row">
                 <div class="col-11 mx-auto">
-                    
+                    <h5>your email</h5>
+                    <div id="email">
+                    </div>
+                    <h5>password</h5>
+                    <div id="password">
+                    </div>
                 </div>
             </div>
         <!--/row-->
@@ -34,7 +39,7 @@
             </div>
             <div class="d-flex p-2 flex-column">
                 <div class="mx-auto text-white m-1 py-1">
-                    <h6>Developed by <b><a class="text-white" href="https://ahmedhany7.github.io/CV/">Ahmed Hany</a> and Zeinab Gomaa</b></h6>
+                    <h6>Developed by <b><a class="text-white" href="https://ahmedhany7.github.io/CV/">Ahmed Hany</a></b></h6>
                 </div>
             </div>
         </div>
@@ -48,11 +53,11 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
         var url_string = window.location.href;
-var url = new URL(url_string);
-var e = url.searchParams.get("email");
-var p = url.searchParams.get("password");
-console.log(e);
-console.log(p);
+        var url = new URL(url_string);
+        var e = url.searchParams.get("email");
+        var p = url.searchParams.get("password");
+        document.getElementById("email").innerHTML = e;
+        document.getElementById("password").innerHTML = p;
     </script>
     </body>
 </html>
