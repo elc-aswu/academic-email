@@ -46,5 +46,13 @@
     <script src="js/jquery-3.4.1.slim.min.js"></script>
     <script src="js/popper.min.js" ></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        var url_string = window.location.href;
+var url = new URL(url_string);
+var e = url.searchParams.get("email");
+var p = url.searchParams.get("password");
+console.log(e);
+console.log(p);
+    </script>
     </body>
 </html>
