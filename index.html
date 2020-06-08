@@ -21,9 +21,6 @@
                     <h5>your email</h5>
                     <div id="email">
                     </div>
-                    <h5>password</h5>
-                    <div id="password">
-                    </div>
                 </div>
             </div>
         <!--/row-->
@@ -56,8 +53,17 @@
         var url = new URL(url_string);
         var e = url.searchParams.get("email");
         var p = url.searchParams.get("password");
-        document.getElementById("email").innerHTML = e;
-        document.getElementById("password").innerHTML = p;
+        
+        var allinfo = "";
+        if(p=="")
+        {
+            allinfo = "لم يتم انشاء ايميل جامعي لم حتي الآن";
+        }
+        else
+        {
+            allinfo = e + "\r\npassword\r\n" + p;
+        }
+        document.getElementById("email").innerHTML = allinfo;
     </script>
     </body>
 </html>
