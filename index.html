@@ -10,7 +10,62 @@
         <link rel="stylesheet" href="css/my.css">
     </head>
     <body>
-        قيد التطوير
-    
+          <div class="jumbotron jumbotron-fluid  text-center py-4">
+            <div class="">
+                <h1 class="display-4">وحدة التعلم الإلكتروني</h1> 
+            </div>
+        </div>
+        <div class="container-fluid py-3">
+            <div class="row">
+                <div class="mx-auto">
+                    <h5>your email</h5>
+                    <div id="email">
+                    </div>
+                </div>
+            </div>
+        <!--/row-->
+        </div>
+
+    <div class="container-fluid">
+            <div class="row py-2">
+                <div class="mx-auto m-1 py-2">
+                    <a href="https://bit.ly/AswuELC">
+                        <img class="p-2" src="pic/finallogo11.png" id="logo" alt="E-learing Aswan University logo">
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex p-2 flex-column">
+                <div class="mx-auto text-white m-1 py-1">
+                    <h6>Developed by <b><a class="text-white" href="https://ahmedhany7.github.io/CV/">Ahmed Hany</a></b></h6>
+                </div>
+            </div>
+        </div>
+
+    <!--container-->
+
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var e = url.searchParams.get("email");
+        var p = url.searchParams.get("password");
+
+        var allinfo = "";
+        if(p=="")
+        {
+            allinfo = "لم يتم انشاء حسابك الجامعي حتي الآن";
+        }
+        else
+        {
+            allinfo = `<h4>${e}</h4>` + "<h5>password</h5>"
+                +`<h4>${p}</h4><h5>`
+            +`<a href="https://www.microsoft.com/microsoft-365/onerf/signin?EEL=True&pcexp=True&ru=https%3A%2F%2Fwww.microsoft.com%2Far-ww%2Fmicrosoft-365%3Fms.url%3Doffice365com%26rtc%3D1" target="_blank"><button type="button" class="btn btn-primary">تفعيل الايميل الجامعي</button></a></h5>` ;
+        }
+        document.getElementById("email").innerHTML = allinfo;
+    </script>
 
 </body></html>
